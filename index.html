@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyth Network Facts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="https://pyth.network/" target="_blank" rel="noreferrer" aria-label="Pyth Network">
+          <img src="media/pyth-logo-wordmark-light.svg" alt="Pyth Network" />
+        </a>
+        <div class="network-status" aria-label="Network status">
+          <span class="status-dot"></span>
+          <span>Oracle live</span>
+        </div>
+      </header>
+
+      <section class="console-layout" aria-labelledby="page-title">
+        <div class="control-plane">
+          <p class="eyebrow">Pyth Network</p>
+          <h1 id="page-title">
+            <span>Pyth</span>
+            <span>Facts</span>
+          </h1>
+          <p class="lead">
+            100 quick signals about Pyth, oracle infrastructure, price feeds, and the community.
+          </p>
+
+          <div class="category-tabs" id="categoryTabs" aria-label="Fact categories"></div>
+
+          <button class="draw-button" id="drawFact" type="button">
+            <span class="button-mark" aria-hidden="true">P</span>
+            <span>Random fact</span>
+          </button>
+
+          <div class="stats-strip" aria-label="Fact stats">
+            <div>
+              <span id="seenCount">0</span>
+              <small>seen</small>
+            </div>
+            <div>
+              <span id="poolCount">100</span>
+              <small>pool</small>
+            </div>
+            <div>
+              <span id="activeCategory">All</span>
+              <small>mode</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-stage">
+          <img class="symbol-watermark" src="media/pyth-logo-symbol-light.svg" alt="" aria-hidden="true" />
+
+          <div class="ticker-column ticker-left" aria-hidden="true">
+            <span>BTC/USD</span>
+            <span>ETH/USD</span>
+            <span>SOL/USD</span>
+            <span>EUR/USD</span>
+            <span>GOLD/USD</span>
+            <span>PYTH/USD</span>
+          </div>
+
+          <section class="fact-panel" aria-live="polite">
+            <div class="fact-panel-top">
+              <div>
+                <span class="feed-label" id="feedLabel">PRICE UPDATE</span>
+                <span class="feed-category" id="feedCategory">All facts</span>
+              </div>
+              <span class="fact-index" id="factIndex">#000</span>
+            </div>
+
+            <p class="fact-text" id="factText">Click the button to get a random Pyth fact.</p>
+
+            <div class="fact-panel-bottom">
+              <div class="confidence">
+                <span>confidence</span>
+                <strong id="confidenceValue">ready</strong>
+              </div>
+              <button class="copy-button" id="copyFact" type="button">Copy</button>
+            </div>
+          </section>
+
+          <aside class="history-panel" aria-label="Recent facts">
+            <div class="history-title">Recent feeds</div>
+            <ol id="historyList">
+              <li>Waiting for update</li>
+            </ol>
+          </aside>
+
+          <div class="token-orbit" aria-hidden="true">
+            <img src="media/pyth-token.svg" alt="" />
+          </div>
+
+          <div class="ticker-column ticker-right" aria-hidden="true">
+            <span>PULL</span>
+            <span>PUSH</span>
+            <span>HERMES</span>
+            <span>PYTHNET</span>
+            <span>ENTROPY</span>
+            <span>RELAY</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="dev-credit">
+        dev - <a href="https://x.com/kuznetsjeka" target="_blank" rel="noreferrer">Kuznets</a>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
