@@ -127,7 +127,7 @@ const elements = {
   factText: document.querySelector("#factText"),
   factIndex: document.querySelector("#factIndex"),
   feedCategory: document.querySelector("#feedCategory"),
-  confidenceValue: document.querySelector("#confidenceValue"),
+  Value: document.querySelector("#Value"),
   seenCount: document.querySelector("#seenCount"),
   poolCount: document.querySelector("#poolCount"),
   activeCategory: document.querySelector("#activeCategory"),
@@ -165,8 +165,7 @@ const resetPool = () => {
 const formatIndex = (id) => `#${String(id).padStart(3, "0")}`;
 
 const confidenceFor = (fact) => {
-  const value = 91 + ((fact.id * 7) % 9);
-  return `${value}.${fact.id % 10}%`;
+  const value = 100
 };
 
 const renderStats = () => {
