@@ -127,7 +127,6 @@ const elements = {
   factText: document.querySelector("#factText"),
   factIndex: document.querySelector("#factIndex"),
   feedCategory: document.querySelector("#feedCategory"),
-  Value: document.querySelector("#Value"),
   seenCount: document.querySelector("#seenCount"),
   poolCount: document.querySelector("#poolCount"),
   activeCategory: document.querySelector("#activeCategory"),
@@ -163,10 +162,6 @@ const resetPool = () => {
 };
 
 const formatIndex = (id) => `#${String(id).padStart(3, "0")}`;
-
-const confidenceFor = (fact) => {
-  const value = 100
-};
 
 const renderStats = () => {
   const total = categoryFacts().length;
@@ -213,7 +208,6 @@ const drawFact = () => {
   elements.factText.textContent = fact.text;
   elements.factIndex.textContent = formatIndex(fact.id);
   elements.feedCategory.textContent = state.activeCategory.label;
-  elements.confidenceValue.textContent = confidenceFor(fact);
   elements.copyFact.textContent = "Copy";
 
   renderStats();
@@ -237,7 +231,6 @@ const setCategory = (categoryId) => {
   elements.feedCategory.textContent = nextCategory.label;
   elements.factIndex.textContent = "#000";
   elements.factText.textContent = "Click the button to get a random Pyth fact.";
-  elements.confidenceValue.textContent = "ready";
   elements.copyFact.textContent = "Copy";
 
   document.querySelectorAll(".tab-button").forEach((button) => {
